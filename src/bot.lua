@@ -976,6 +976,13 @@ coroutine.wrap(function()
         elseif msg.content:find("^>%s*whitelist%s+.+$") then
             local member = msg.content:match("^>%s*whitelist%s+(.+)")
             whitelistPlayer(member, msg)
+	-- custom responses
+	elseif msg.content:find("is wtal a bot") then
+		msg.channel:send("I'm a human that has superhuman reflexes.")
+	elseif msg.content:find("ty wtal") then
+		msg.channel:send("you're welcome.")
+	elseif msg.content:find("why?") then
+		msg.channel:send("before asking 'why' you should ask yourself 'why not' instead.")
         -- tribe chat
         elseif msg.channel.id == enum.channels.tribe_chat then
             _, count = msg.content:gsub("`", "")
