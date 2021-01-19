@@ -461,6 +461,20 @@ coroutine.wrap(function()
         
         if message == "!who" then
             printOnlineUsers("discord", member)
+	if msg.content:find("is wtal a bot") then
+    		tfm:sendTribeMessage("I'm a human that has superhuman reflexes.")
+	elseif msg.content:find("ty wtal") then
+    		tfm:sendTribeMessage("you're welcome.")
+	elseif msg.content:find("fuck") then
+    		tfm:sendTribeMessage("no swearing in the holy land.")
+	elseif msg.content:find("shit") then
+    		tfm:sendTribeMessage("no swearing in the holy land.")
+	elseif msg.content:find("motherfucker") then
+    		tfm:sendTribeMessage("no swearing in the holy land.")
+	elseif msg.content:find("who is joy") then
+    		tfm:sendTribeMessage("a genius known for creating me")
+	elseif msg.content:find("who is seniru") then
+    		tfm:sendTribeMessage("a noob who copied joy's code and claimed it was his")
         else
             guild:getChannel(enum.channels.tribe_chat):send(
                 ("> **[" .. member .. "]** " .. message):gsub("@here", "@|here"):gsub("@everyone", "@|everyone")
